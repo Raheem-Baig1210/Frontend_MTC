@@ -7,14 +7,14 @@ const Navbar = () => {
       <ul className="flex gap-6">
         <li>
           <button
-            className="hover:text-gray-300 bg-light-green text-white font-bold rounded-full py-2 px-4"
+            className="hover:text-gray-300 bg-light-green text-black font-bold rounded-full py-2 px-4"
           >
             Admin
           </button>
         </li>
         <li>
           <button
-            className="hover:text-gray-300 bg-light-green text-white  font-bold rounded-full py-2 px-4"
+            className="hover:text-gray-300 bg-light-green text-black  font-bold rounded-full py-2 px-4"
           >
             Tutor
           </button>

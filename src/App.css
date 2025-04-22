@@ -1,6 +1,27 @@
 @import "tailwindcss";
 
 
+.bg-nyanza {
+  background-color: #DAF7DC; /* Nyanza green */
+}
+
+.bg-light-green {
+  background-color: #9EE493;
+}
+
+.bg-charcoal {
+  background-color: #2F4858;
+}
+
+.bg-car-blue{
+  background-color: #86BBD8;
+}
+
+.bg-med-blue {
+  background-color: #336699;
+}
+
+
 
 
 
