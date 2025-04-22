@@ -6,9 +6,12 @@ import CardsContainer from "./CardsContainer";
 const HomePage = () => {
   return (
     <div>
-      <Navbar />
+      <>
+      <Navbar/>
+      <br />
       <Hero/>
       <CardsContainer/>
+      </>
     </div>
   );
 };

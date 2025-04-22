@@ -12,6 +12,7 @@ import Attendance from './LandingPages/Admin/Attendace';
 import Students from './LandingPages/Admin/students';
 import Tutor from './LandingPages/Admin/tutors';
 import TutorDashboard from './LandingPages/Tutor/TutorDashboard';
+import HomePage from './LandingPages/homepage/HomePage';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
+    <Route path='/home' element={<HomePage/>}></Route>
     <Route path='/' element={<Login/>}></Route>
     <Route path='/admin-dashboard' element={<AdminDashboard/>}></Route>
     <Route path='/tutor-dashboard' element={<TutorDashboard/>}></Route>
