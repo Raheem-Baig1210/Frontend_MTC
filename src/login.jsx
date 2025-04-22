@@ -37,7 +37,6 @@ const Login = () => {
         <div className="border rounded-[3%] ml-118 mt-30 bg-gray-300 w-[40%] h-120 text-center">
         <h1 className="text-3xl mt-10 ">Admin Login</h1>
             <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
-            <h1>login</h1>
                 <div className="relative z-0 w-full mb-5 group pt-15">
                     <label
                     htmlFor="floating_email"
