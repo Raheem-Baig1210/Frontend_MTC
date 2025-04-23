@@ -1,24 +1,26 @@
 @import "tailwindcss";
 
 
+
+
 .bg-nyanza {
-  background-color: #DAF7DC; /* Nyanza green */
+  background-color: #DAF7DC; /*green-100*/
 }
 
 .bg-light-green {
-  background-color: #9EE493;
+  background-color: #9EE493; /*green-300*/
 }
 
 .bg-charcoal {
-  background-color: #2F4858;
+  background-color: #18425d; /*sky-900*/
 }
 
 .bg-car-blue{
-  background-color: #86BBD8;
+  background-color: #86BBD8;  /*sky-300*/
 }
 
 .bg-med-blue {
-  background-color: #336699;
+  background-color: #336699; /*sky-700*/
 }
 
 
