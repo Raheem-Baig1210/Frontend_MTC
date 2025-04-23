@@ -11,10 +11,8 @@ const TutorDashboard = () => {
     <>
       <div class="w-full bg-white shadow p-4 flex items-center justify-between">
         <div class="flex items-center space-x-6">
+          
           <span class="font-semibold text-gray-800">Tutor Dashboard</span>
-          <div className="" style={{ backgroundColor: "#336699" }}>
-                        <button className="mt-4 text-3xl text-white font-normal cursor-pointer" style={{ backgroundColor: "#336699" }} onClick={handleLogout}>Logout</button>
-                        </div>
           <div class="flex items-center space-x-1 text-gray-600 hover:text-black cursor-pointer">
             <span>Students</span>
           </div>
@@ -22,14 +20,14 @@ const TutorDashboard = () => {
           <div class="flex items-center space-x-1 text-gray-600 hover:text-black cursor-pointer">
             <span>Dashboard</span>
           </div>
-        </div>
+          </div>
+        
 
         <div>
-          {/* <img
-            // src=
-            alt="Avatar"
-            class="w-8 h-8 rounded-full border border-gray-300"
-          /> */}
+
+          <div className="border rounded" style={{ backgroundColor: "#336699" }}>
+                        <button className="m-2 text-3xl text-white font-normal cursor-pointer " style={{ backgroundColor: "#336699" }} onClick={handleLogout}>Logout</button>
+                        </div>
         </div>
       </div>
       <div className="p-6 space-y-6">
