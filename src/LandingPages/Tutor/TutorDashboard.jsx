@@ -1,41 +1,45 @@
 import React from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const TutorDashboard = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-      navigate('/');
-    };
+    navigate('/');
+  };
+
   return (
     <>
+      {/* Dashboard Header */}
+      <div className="w-full bg-white shadow p-4 flex items-center justify-between">
+        <div className="flex items-center space-x-6">
+          <span className="font-semibold text-gray-800 text-xl">Tutor Dashboard</span>
 
-      <div class="w-full bg-white shadow p-4 flex items-center justify-between">
-        <div class="flex items-center space-x-6">
-          <span class="font-semibold text-gray-800">Tutor Dashboard</span>
-
-
-      <div class="w-full bg-white shadow p-4 flex items-center justify-between">
-        <div class="flex items-center space-x-6">
-          
-          <span class="font-semibold text-gray-800">Tutor Dashboard</span>
-          <div class="flex items-center space-x-1 text-gray-600 hover:text-black cursor-pointer">
-            <span>Students</span>
+          {/* Navigation Links */}
+          <div className="flex items-center space-x-4">
+            <div className="text-gray-600 hover:text-black cursor-pointer">
+              <span>Students</span>
+            </div>
+            <div className="text-gray-600 hover:text-black cursor-pointer">
+              <span>Dashboard</span>
+            </div>
           </div>
+        </div>
 
-          <div className="flex items-center space-x-1 text-gray-600 hover:text-black cursor-pointer">
-            <span>Dashboard</span>
-          </div>
-          </div>
-        
-
+        {/* Logout Button */}
         <div>
-          <div className="border rounded" style={{ backgroundColor: "#336699" }}>
-                        <button className="m-2 text-3xl text-white font-normal cursor-pointer " style={{ backgroundColor: "#336699" }} onClick={handleLogout}>Logout</button>
-                        </div>
+          <button 
+            className="bg-blue-600 text-white text-lg py-2 px-4 rounded hover:bg-blue-700 transition duration-300" 
+            onClick={handleLogout}
+          >
+            Logout
+          </button>
         </div>
       </div>
+
+      {/* Dashboard Content */}
       <div className="p-6 space-y-6">
+        {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="bg-white rounded shadow">
             <div className="p-4">
@@ -63,8 +67,9 @@ const TutorDashboard = () => {
           </div>
         </div>
 
-        <div className="bg-white rounded shadow jus">
-          <div className="p-6 space-y-4 ">
+        {/* Attendance Section */}
+        <div className="bg-white rounded shadow">
+          <div className="p-6 space-y-4">
             <div className="flex items-center justify-between">
               <h2 className="text-lg font-semibold">Mark Today's Attendance</h2>
               <span className="text-sm text-gray-500">07:03</span>
@@ -87,17 +92,19 @@ const TutorDashboard = () => {
               </div>
             </div>
 
+            {/* Action Buttons */}
             <div className="flex space-x-2">
-              <button className="w-85 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+              <button className="flex-grow bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
                 Mark Attendance
               </button>
-              <button className="w-85 border-gray-400 text-gray-700 py-2 rounded hover:bg-gray-100 transition">
+              <button className="flex-grow border border-gray-400 text-gray-700 py-2 rounded hover:bg-gray-100 transition">
                 Cancel
               </button>
             </div>
           </div>
         </div>
 
+        {/* Forgot Attendance Section */}
         <div className="flex justify-end">
           <button className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-gray-800 transition">
             Forgot to Mark Today’s Attendance
@@ -107,4 +114,5 @@ const TutorDashboard = () => {
     </>
   );
 };
+
 export default TutorDashboard;
