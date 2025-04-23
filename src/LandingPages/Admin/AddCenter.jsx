@@ -6,7 +6,7 @@ import * as Yup from "yup"
 function AddCenter() {
   return (
     <>
-    <div className='w-[100%] h-[100%] bg-[#302f2f]'>
+    <div className='w-[100vw] h-[100vh] bg-[#302f2f]'>
       <h1 className="block mb-5 text-4xl p-4 font-large text-gray-900 text-white text-center">Add A New Center</h1>
     <Formik
       initialValues={{
