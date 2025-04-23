@@ -1,15 +1,3 @@
-// import React from 'react'
-
-// const Intro = () => {
-//   return (
-//     <div>
-//       <h6 className="text-3xl font-bold text-center mt-10 mb-6 text-sky-900">Mohalla Tuition Centers in Slum Areas</h6>
-
-//     </div>
-//   )
-// }
-
-// export default Intro
 
 import React from "react";
 
@@ -20,56 +8,51 @@ const Intro = () => {
 
       <br />
       {/* Left-Side Content */}
-      <div className="lg:w-1/4 hidden lg:flex flex-col justify-start items-start gap-4 ">
-          
-        <div className="w-full h-60  flex flex-col items-center justify-center group">
-          <img 
-              src="https://thequranfoundation.org/wp-content/uploads/elementor/thumbs/education-ql1fzaz4q9wmh2sqotsiekcfn26rf83incaw963rc0.png" 
-              alt="Slogan Image"
-              className="w-25 h-25 mb-6 transition-transform duration-300 group-hover:scale-110 " // Adjust dimensions as needed
+      <div className="lg:w-1/4 hidden lg:flex flex-col justify-start items-center gap-8">
+        {/* Card 1 */}
+        <div className="w-full h-60 flex flex-col items-center justify-center group">
+          <img
+            src="https://thequranfoundation.org/wp-content/uploads/elementor/thumbs/education-ql1fzaz4q9wmh2sqotsiekcfn26rf83incaw963rc0.png"
+            alt="Equal Access to Education"
+            className="w-28 h-28 mb-4 transition-transform duration-300 group-hover:scale-110"
           />
-          <a 
-            href="#" 
-            className="text-2xl font-bold text-black group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer"
+          <a
+            href="#"
+            className="text-xl font-bold text-black group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer text-center"
           >
             Equal Access to Education
           </a>
-
         </div>
 
-        <br />
-
-
-        <div className="w-full h-60  flex flex-col items-center justify-center group">
-          <img 
-              src="https://thequranfoundation.org/wp-content/uploads/elementor/thumbs/idea-ql1g5q7ffip5t5gv6lqqfxztruj20rlhj4scb8kwtc.png" 
-              alt="Slogan Image"
-              className="w-25 h-25 mb-6 transition-transform duration-300 group-hover:scale-110 " // Adjust dimensions as needed
+        {/* Card 2 */}
+        <div className="w-full h-60 flex flex-col items-center justify-center group">
+          <img
+            src="https://thequranfoundation.org/wp-content/uploads/elementor/thumbs/idea-ql1g5q7ffip5t5gv6lqqfxztruj20rlhj4scb8kwtc.png"
+            alt="Addressing Learning Gaps"
+            className="w-28 h-28 mb-4 transition-transform duration-300 group-hover:scale-110"
           />
-          <a 
-            href="#" 
-            className="text-2xl font-bold text-black group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer"
+          <a
+            href="#"
+            className="text-xl font-bold text-black group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer text-center"
           >
             Addressing Learning Gaps
           </a>
         </div>
 
-        <br />
-
+        {/* Card 3 */}
         <div className="w-full h-60 flex flex-col items-center justify-center group">
-          <img 
-            src="https://thequranfoundation.org/wp-content/uploads/elementor/thumbs/team-ql1g7k04px78dutaie6mahe3ctiqzkup46gbwlvcps.png" 
-            alt="Slogan Image"
-            className="w-25 h-25 mb-6 transition-transform duration-300 group-hover:scale-110" // Correct dimensions
+          <img
+            src="https://thequranfoundation.org/wp-content/uploads/elementor/thumbs/team-ql1g7k04px78dutaie6mahe3ctiqzkup46gbwlvcps.png"
+            alt="Empowerment Through Education"
+            className="w-28 h-28 mb-4 transition-transform duration-300 group-hover:scale-110"
           />
-          <a 
-            href="#" 
-            className="text-2xl font-bold text-black group-hover:text-green-300 group-hover:scale-110 transition-transform duration-300 cursor-pointer"
+          <a
+            href="#"
+            className="text-xl font-bold text-black group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer text-center"
           >
-                 Empowerment Through Education
+            Empowerment Through Education
           </a>
         </div>
-
       </div>
 
 
@@ -138,51 +121,49 @@ const Intro = () => {
       </div>
 
       {/* Right-Side Content */}
-      <div className="lg:w-1/4 hidden lg:flex flex-col justify-start items-start gap-4">
-        <div className="w-full h-60  flex flex-col items-center justify-center group">
-          <img 
-              src="https://thequranfoundation.org/wp-content/uploads/elementor/thumbs/confidence-ql1ga6xtw6t6ygze417xsbfncqitl0bl58cddjyl9c.png" 
-              alt="Slogan Image"
-              className="w-25 h-25 mb-6 transition-transform duration-300 group-hover:scale-110 " // Adjust dimensions as needed
+      <div className="lg:w-1/4 hidden lg:flex flex-col justify-start items-center gap-8">
+        {/* Card 4 */}
+        <div className="w-full h-60 flex flex-col items-center justify-center group">
+          <img
+            src="https://thequranfoundation.org/wp-content/uploads/elementor/thumbs/confidence-ql1ga6xtw6t6ygze417xsbfncqitl0bl58cddjyl9c.png"
+            alt="Building Confidence and Self-esteem"
+            className="w-28 h-28 mb-4 transition-transform duration-300 group-hover:scale-110"
           />
-          <a 
-            href="#" 
-            className="text-2xl font-bold text-black group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer"
+          <a
+            href="#"
+            className="text-xl font-bold text-black group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer text-center"
           >
-Building Confidence and Self-esteem       </a>
-
+            Building Confidence and Self-esteem
+          </a>
         </div>
 
-        <br />  
-
-
-        <div className="w-full h-60  flex flex-col items-center justify-center group">
-          <img 
-              src="https://thequranfoundation.org/wp-content/uploads/elementor/thumbs/abilities-ql1g91kxjh8krmngtjccqlvd7s6o6brebjn09dnwv4.png" 
-              alt="Slogan Image"
-              className="w-25 h-25 mb-6 transition-transform duration-300 group-hover:scale-110 " // Adjust dimensions as needed
+        {/* Card 5 */}
+        <div className="w-full h-60 flex flex-col items-center justify-center group">
+          <img
+            src="https://thequranfoundation.org/wp-content/uploads/elementor/thumbs/abilities-ql1g91kxjh8krmngtjccqlvd7s6o6brebjn09dnwv4.png"
+            alt="Enhancing Literacy and Numeracy Skills"
+            className="w-28 h-28 mb-4 transition-transform duration-300 group-hover:scale-110"
           />
-          <a 
-            href="#" 
-            className="text-2xl font-bold text-black group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer"
+          <a
+            href="#"
+            className="text-xl font-bold text-black group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer text-center"
           >
             Enhancing Literacy and Numeracy Skills
           </a>
         </div>
 
-        <br />
-
+        {/* Card 6 */}
         <div className="w-full h-60 flex flex-col items-center justify-center group">
-          <img 
-            src="https://thequranfoundation.org/wp-content/uploads/elementor/thumbs/school-ql1gve6s1nu0tu6qb7500ytxpm0v78hmq62n28iwww.png" 
-            alt="Slogan Image"
-            className="w-25 h-25 mb-6 transition-transform duration-300 group-hover:scale-110" // Correct dimensions
+          <img
+            src="https://thequranfoundation.org/wp-content/uploads/elementor/thumbs/school-ql1gve6s1nu0tu6qb7500ytxpm0v78hmq62n28iwww.png"
+            alt="Preventing School Dropout"
+            className="w-28 h-28 mb-4 transition-transform duration-300 group-hover:scale-110"
           />
-          <a 
-            href="#" 
-            className="text-2xl font-bold text-black group-hover:text-green-300 group-hover:scale-110 transition-transform duration-300 cursor-pointer"
+          <a
+            href="#"
+            className="text-xl font-bold text-black group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer text-center"
           >
-           Preventing School Dropout
+            Preventing School Dropout
           </a>
         </div>
       </div>
