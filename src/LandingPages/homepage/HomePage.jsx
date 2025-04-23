@@ -1,12 +1,13 @@
 import React from "react";
+// import { Route,Routes,Br } from "react-router-dom";
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import CardsContainer from "./CardsContainer";
 
-const HomePage = () => {
+function HomePage() {
   return (
     <div>
-      <Navbar />
+      <Navbar/>
       <Hero/>
       <CardsContainer/>
     </div>

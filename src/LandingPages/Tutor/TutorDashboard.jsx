@@ -1,18 +1,18 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const TutorDashboard = () => {
   return (
     <>
-      <div class="w-full bg-white shadow p-4 flex items-center justify-between">
-        <div class="flex items-center space-x-6">
-          <span class="font-semibold text-gray-800">Tutor Dashboard</span>
+      <div className="w-full bg-white shadow p-4 flex items-center justify-between">
+        <div className="flex items-center space-x-6">
+          <span className="font-semibold text-gray-800">Tutor Dashboard</span>
 
-          <div class="flex items-center space-x-1 text-gray-600 hover:text-black cursor-pointer">
+          <div className="flex items-center space-x-1 text-gray-600 hover:text-black cursor-pointer">
             <span>Students</span>
           </div>
 
-          <div class="flex items-center space-x-1 text-gray-600 hover:text-black cursor-pointer">
+          <div className="flex items-center space-x-1 text-gray-600 hover:text-black cursor-pointer">
             <span>Dashboard</span>
           </div>
         </div>
@@ -21,7 +21,7 @@ const TutorDashboard = () => {
           {/* <img
             // src=
             alt="Avatar"
-            class="w-8 h-8 rounded-full border border-gray-300"
+            className="w-8 h-8 rounded-full border border-gray-300"
           /> */}
         </div>
       </div>
