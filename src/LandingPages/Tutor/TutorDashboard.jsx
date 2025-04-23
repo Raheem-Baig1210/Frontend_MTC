@@ -67,7 +67,7 @@ const TutorDashboard = () => {
                   className="w-full object-cover h-48 rounded-lg"
                 />
               </div>
-              <div className="space-y-1 text-sm">
+              <div className="space-y-1 text-lg">
                 <p>
                   <strong>Class Location:</strong> Main Campus, Room 401
                 </p>
@@ -78,10 +78,10 @@ const TutorDashboard = () => {
             </div>
 
             <div className="flex space-x-2">
-              <button className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+              <button className="w-85 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
                 Mark Attendance
               </button>
-              <button className="w-full border border-gray-400 text-gray-700 py-2 rounded hover:bg-gray-100 transition">
+              <button className="w-85 border-gray-400 text-gray-700 py-2 rounded hover:bg-gray-100 transition">
                 Cancel
               </button>
             </div>
