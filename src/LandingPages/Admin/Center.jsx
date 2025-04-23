@@ -10,7 +10,7 @@ const Centers = () => {
         <>
             <div className="flex">
                 <Sidebar />
-                <div className="">
+                <div className="w-[80vw]">
                     <h1 className="text-3xl font-normal mt-4 ml-2 mb-3">Centers Management</h1>
                     <div className="flex justify-between">
                     <div>
@@ -22,17 +22,17 @@ const Centers = () => {
                         <br />
                         y
                     </div>
-                    <div>Total Students
+                    <div className="mr-2">Total Students
                         <br />
                         z
                     </div>
                     </div>
-                    <div className="flex justify-around">
+                    <div className="flex justify-between">
                         <input className="border rounded mt-4 p-1 text-[15px] w-[300px]"
                          type="text" placeholder="Search Centers"/>
                         <div className="flex gap-4">
                         <button className="text-[25px] p-3 h-13 m-2 border rounded">Add Center</button>
-                        <button className="text-[25px] p-3 h-13 m-2 border rounded">Remove Center</button>
+                        <button className="text-[25px] p-3 h-13 m-2 border rounded ">Remove Center</button>
                         </div>
                     </div>
                     

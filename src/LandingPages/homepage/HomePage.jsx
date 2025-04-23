@@ -7,6 +7,7 @@ import CardsContainer from "./CardsContainer";
 function HomePage() {
   return (
     <div>
+      <>
       <Navbar/>
       <Hero/>
       <CardsContainer/>
