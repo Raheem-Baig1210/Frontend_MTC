@@ -14,7 +14,7 @@ import Attendance from './LandingPages/Admin/Attendace';
 import Students from './LandingPages/Admin/students';
 import Tutor from './LandingPages/Admin/tutors';
 import TutorDashboard from './LandingPages/Tutor/TutorDashboard';
-import HomePage from './LandingPages/homepage/HomePage';
+// import HomePage from './LandingPages/homepage/HomePage';
 import TutorProfile from './LandingPages/Admin/TutorProfile';
 
 
