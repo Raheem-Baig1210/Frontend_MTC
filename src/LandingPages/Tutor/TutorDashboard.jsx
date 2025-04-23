@@ -7,7 +7,12 @@ const TutorDashboard = () => {
   const handleLogout = () => {
     navigate('/');
   };
-
+  const handledashboard = () => {
+    navigate('/tutor-dashboard');
+  }
+  const handlestudent = () => {
+    navigate('/student-list');
+  };
   return (
     <>
       {/* Dashboard Header */}
@@ -18,10 +23,10 @@ const TutorDashboard = () => {
           {/* Navigation Links */}
           <div className="flex items-center space-x-4">
             <div className="text-gray-600 hover:text-black cursor-pointer">
-              <span>Students</span>
+              <span onClick={handlestudent}>Students</span>
             </div>
             <div className="text-gray-600 hover:text-black cursor-pointer">
-              <span>Dashboard</span>
+              <span onClick={handledashboard}>Dashboard</span>
             </div>
           </div>
         </div>
@@ -29,7 +34,7 @@ const TutorDashboard = () => {
         {/* Logout Button */}
         <div>
           <button 
-            className="bg-blue-600 text-white text-lg py-2 px-4 rounded hover:bg-blue-700 transition duration-300" 
+            className="bg-blue-600 text-white text-lg py-1 px-2 rounded hover:bg-blue-700 transition duration-300" 
             onClick={handleLogout}
           >
             Logout
