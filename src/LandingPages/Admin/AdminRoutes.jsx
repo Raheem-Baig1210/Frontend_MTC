@@ -5,17 +5,13 @@ import React from 'react';
 // import ReactDom from "react-dom"
 import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 import './App.css'
-import HomePage from "./LandingPages/homepage/HomePage"
-import LoginAdmin from './LandingPages/Admin/Admin_login'
-import LoginTutor from "./LandingPages/Tutor/Tutor_login"
-import AdminDashboard from "./LandingPages/Admin/AdminDashboard"
-import Centers from './LandingPages/Admin/Center';
-import Attendance from './LandingPages/Admin/Attendace';
-import Students from './LandingPages/Admin/students';
-import Tutor from './LandingPages/Admin/tutors';
+import Login from './login'
+import AdminDashboard from "./AdminDashboard"
+import Centers from './Center';
+import Attendance from './Attendace';
+import Students from './students';
+import Tutor from './tutors';
 import TutorDashboard from './LandingPages/Tutor/TutorDashboard';
-import HomePage from './LandingPages/homepage/HomePage';
-import TutorProfile from './LandingPages/Admin/TutorProfile';
 
 
 function App() {
@@ -23,10 +19,7 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-    <Route path='/' element={<HomePage/>}></Route>
-    <Route path='/login-tutor' element={<LoginTutor/>}/>
-    <Route path='/login-admin' element={<LoginAdmin/>}/>
-
+    <Route path='/' element={<Login/>}></Route>
     <Route path='/admin-dashboard' element={<AdminDashboard/>}></Route>
     <Route path='/tutor-dashboard' element={<TutorDashboard/>}></Route>
     <Route path='/centers' element={<Centers/>}></Route>

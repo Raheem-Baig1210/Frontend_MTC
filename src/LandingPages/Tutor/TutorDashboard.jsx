@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const TutorDashboard = () => {
   const navigate = useNavigate();
@@ -9,6 +9,7 @@ const TutorDashboard = () => {
     };
   return (
     <>
+
       <div class="w-full bg-white shadow p-4 flex items-center justify-between">
         <div class="flex items-center space-x-6">
           
@@ -17,14 +18,13 @@ const TutorDashboard = () => {
             <span>Students</span>
           </div>
 
-          <div class="flex items-center space-x-1 text-gray-600 hover:text-black cursor-pointer">
+          <div className="flex items-center space-x-1 text-gray-600 hover:text-black cursor-pointer">
             <span>Dashboard</span>
           </div>
           </div>
         
 
         <div>
-
           <div className="border rounded" style={{ backgroundColor: "#336699" }}>
                         <button className="m-2 text-3xl text-white font-normal cursor-pointer " style={{ backgroundColor: "#336699" }} onClick={handleLogout}>Logout</button>
                         </div>
