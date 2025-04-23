@@ -4,9 +4,13 @@ import Card from "./Card"; // Check path
 const CardsContainer = () => {
   const cards = [
     { title: "Social Development", image: "https://thequranfoundation.org/wp-content/uploads/2020/06/icon-1.png" },
-    { title: "Educational Development", image: "https://thequranfoundation.org/wp-content/uploads/2020/06/icon-2.png" },
+    { title: "Educational Development", image: "https://thequranfoundation.org/wp-content/uploads/2020/06/icon-4.png" },
     { title: "Economic Development", image: "https://thequranfoundation.org/wp-content/uploads/2020/06/icon-3.png" },
-    { title: "Health and Wellness", image: "https://thequranfoundation.org/wp-content/uploads/2020/06/icon-4.png" }
+    { title: "Health and Wellness", image: "https://thequranfoundation.org/wp-content/uploads/2020/06/icon-2.png" }
+
+
+
+
   ];
 
   return (

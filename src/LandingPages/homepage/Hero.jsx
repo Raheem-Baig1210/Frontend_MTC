@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
     return (
-        <div className="h-[500px] w-full bg-cover bg-center relative" style={{
+        <div className=" mt-1000px h-[500px] w-full bg-cover bg-center relative" style={{
             backgroundImage: `url('https://thequranfoundation.org/wp-content/uploads/2024/03/TQF_The_Quran_Foundation_Organization_muslim-boy-learning-mosque.jpg')`
         }}>
             <div className="absolute inset-0 flex items-center justify-end text-black px-10">
