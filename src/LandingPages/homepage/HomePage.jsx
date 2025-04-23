@@ -10,6 +10,7 @@ function HomePage() {
       <Navbar/>
       <Hero/>
       <CardsContainer/>
+      </>
     </div>
   );
 };
