@@ -17,9 +17,9 @@ const Dashboard = () => {
                 <Sidebar />
                 <div className="w-4/5">
                     <div className="flex justify-between">
-                        <h1 className="text-5xl mt-4 ml-4 mb-2 font-normal">Dashborad</h1>
-                        <div className="w-30 text-center" style={{ backgroundColor: "#336699" }}>
-                        <button className="mt-4 text-3xl text-white font-normal cursor-pointer" style={{ backgroundColor: "#336699" }} onClick={handleLogout}>Logout</button>
+                        <h1 className="text-4xl mt-4 ml-4 mb-2 font-normal">Dashboard</h1>
+                        <div className="w-30 text-center">
+                        <button className="text-2xl bg-sky-700 text-white font-normal cursor-pointer border rounded-[10%] p-4 hover:bg-blue-900" onClick={handleLogout}>Logout</button>
                         </div>
                     </div>
                     <hr />

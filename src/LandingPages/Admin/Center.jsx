@@ -1,11 +1,14 @@
 import Sidebar from "./Sidebar";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Centers = () => {
-    // const navigate = useNavigate()
-    // const handleLogout = () => {
-    //     navigate('/');
-    // };
+    const navigate = useNavigate()
+    const handleAddCenter = () => {
+        navigate('/add-center');
+    };
+    const handleRemoveCenter = () => {
+        navigate('/remove-center');
+    };
     return (
         <>
             <div className="flex">
@@ -31,8 +34,8 @@ const Centers = () => {
                         <input className="border rounded mt-4 p-1 text-[15px] w-[300px]"
                          type="text" placeholder="Search Centers"/>
                         <div className="flex gap-4">
-                        <button className="text-[25px] p-3 h-13 m-2 border rounded">Add Center</button>
-                        <button className="text-[25px] p-3 h-13 m-2 border rounded ">Remove Center</button>
+                        <button className="text-[25px] p-3 h-13 m-2 border rounded" onClick={handleAddCenter}>Add Center</button>
+                        <button className="text-[25px] p-3 h-13 m-2 border rounded" onClick={handleRemoveCenter}>Remove Center</button>
                         </div>
                     </div>
                     

@@ -27,11 +27,11 @@ const Sidebar=()=>{
             <h1 className="mt-7 text-3xl text-white" style={{ backgroundColor: "#336699" }}>Admin Dashboard</h1>
             </div>
             <hr />
-            <button className="text-xl border border-gray-300 ml-4 mr-4 pl-2 rounded text-left cursor-pointer" onClick={handleDashboard}>Dashboard</button>
-            <button className="text-lg border border-gray-300 ml-4 mr-4 pl-2 rounded text-left cursor-pointer" onClick={handlecenter}>Centers</button>
-            <button className="text-lg border border-gray-300 ml-4 mr-4 pl-2 rounded text-left cursor-pointer"onClick={handleTutors}>Tutors</button>
-            <button className="text-lg border border-gray-300 ml-4 mr-4 pl-2 rounded text-left cursor-pointer" onClick={handleStudent}>Students</button>
-            <button className="text-lg border border-gray-300 ml-4 mr-4 pl-2 rounded text-left cursor-pointer" onClick={handleAttendace}>Attendence</button>
+            <button className="text-xl border border-gray-300 ml-4 mr-4 pl-2 rounded text-left cursor-pointer hover:bg-gray-300" onClick={handleDashboard}>Dashboard</button>
+            <button className="text-lg border border-gray-300 ml-4 mr-4 pl-2 rounded text-left cursor-pointer hover:bg-gray-300" onClick={handlecenter}>Centers</button>
+            <button className="text-lg border border-gray-300 ml-4 mr-4 pl-2 rounded text-left cursor-pointer hover:bg-gray-300"onClick={handleTutors}>Tutors</button>
+            <button className="text-lg border border-gray-300 ml-4 mr-4 pl-2 rounded text-left cursor-pointer hover:bg-gray-300" onClick={handleStudent}>Students</button>
+            <button className="text-lg border border-gray-300 ml-4 mr-4 pl-2 rounded text-left cursor-pointer hover:bg-gray-300" onClick={handleAttendace}>Attendence</button>
         </div>
         </>
     )

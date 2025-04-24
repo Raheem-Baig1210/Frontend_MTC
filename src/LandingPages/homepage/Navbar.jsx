@@ -18,14 +18,14 @@ const handleTutorLogin  = () => {
       <ul className="flex gap-6">
         <li>
           <button
-            className="hover:-black-300 bg-light-green bg-red-500 text-white font-bold rounded-full py-2 px-4" onClick={handleAdminLogin}
+            className=" bg-light-green text-white font-bold rounded-full py-2 px-4 cursor-pointer hover:bg-red-500" onClick={handleAdminLogin}
           >
             Admin
           </button>
         </li>
         <li>
           <button
-            className="hover:text-black-300 bg-red-500 text-white  font-bold rounded-full py-2 px-4"  onClick={handleTutorLogin}
+            className="bg-light-green text-white font-bold rounded-full py-2 px-4 cursor-pointer hover:bg-red-500"  onClick={handleTutorLogin}
           >
             Tutor
           </button>

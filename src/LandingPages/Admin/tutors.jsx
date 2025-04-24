@@ -1,6 +1,14 @@
+import { useNavigate } from "react-router-dom"
 import Sidebar from "./Sidebar"
 
 const Tutor=()=>{
+    const navigate = useNavigate()
+    const handleAddTutor = () => {
+        navigate('/add-tutor')
+    }
+    const handleRemoveTutor = () => {
+        navigate('/remove-tutor')
+    }
     return (
         <>
         <div className="flex">
@@ -19,10 +27,10 @@ const Tutor=()=>{
 
                         {/* Buttons on the right */}
                         <div className="flex gap-4">
-                            <button className="text-[16px] px-4 py-2 border rounded">
+                            <button className="text-[16px] px-4 py-2 border rounded cursor-pointer hover:bg-gray-200" onClick={handleAddTutor}>
                                 Add Tutor
                             </button>
-                            <button className="text-[16px] px-4 py-2 border rounded">
+                            <button className="text-[16px] px-4 py-2 border rounded cursor-pointer hover:bg-gray-200" onClick={handleRemoveTutor}>
                                 Remove Tutor
                             </button>
                         </div>
