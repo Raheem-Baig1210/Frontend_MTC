@@ -11,7 +11,7 @@ export default function AllAttendance() {
           </select>
           <input type="date" className="border px-2 py-1 rounded" />
           <input type="date" className="border px-2 py-1 rounded" />
-          <button className="bg-black text-white px-4 py-1 rounded">Apply</button>
+          <button className="bg-med-blue text-white px-4 py-1 rounded">Apply</button>
           <button className="bg-gray-200 px-4 py-1 rounded">Reset</button>
         </div>
         {/* Table */}

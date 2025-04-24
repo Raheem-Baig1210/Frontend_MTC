@@ -4,7 +4,9 @@ import React from "react";
 const Intro = () => {
   return (
 
-    <div className="flex flex-col lg:flex-row px-4 lg:px-10">
+
+    <div className="flex flex-col lg:flex-row px-4 lg:px-10" style={{
+      backgroundImage: `url('https://thequranfoundation.org/wp-content/uploads/2020/06/map-bg.jpg')`}}>
 
       <br />
       {/* Left-Side Content */}

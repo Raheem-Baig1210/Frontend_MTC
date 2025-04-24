@@ -10,16 +10,16 @@ export default function StudentList() {
       <TutorNavbar />
       <div className="p-4">
         <div className="flex gap-4 mb-4">
-          <button className="bg-black text-white px-4 py-2 rounded cursor-pointer" onClick={() => navigate("/mark")}>
+          <button className="bg-med-blue text-white px-4 py-2 rounded cursor-pointer" onClick={() => navigate("/mark")}>
             Add Student
           </button>
-          <button className="bg-black text-white px-4 py-2 rounded cursor-pointer" onClick={() => navigate("/mark-attendance")}>
+          <button className="bg-med-blue text-white px-4 py-2 rounded cursor-pointer" onClick={() => navigate("/mark-attendance")}>
             Mark Attendance
           </button>
-          <button className="bg-black text-white px-4 py-2 rounded cursor-pointer" onClick={() => navigate("/all-attendance")}>
+          <button className="bg-med-blue text-white px-4 py-2 rounded cursor-pointer" onClick={() => navigate("/all-attendance")}>
             All Students Attendance
           </button>
-          <button className="bg-black text-white px-4 py-2 rounded cursor-pointer" onClick={() => navigate("/attendance-history")}>
+          <button className="bg-med-blue text-white px-4 py-2 rounded cursor-pointer" onClick={() => navigate("/attendance-history")}>
             Attendance History
           </button>
         </div>
