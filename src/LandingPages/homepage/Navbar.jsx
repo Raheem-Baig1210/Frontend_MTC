@@ -47,7 +47,7 @@ const Navbar = () => {
         <ul className="flex gap-2 md:gap-4">
           <li>
             <button
-              className="bg-green-300 text-sky-900 font-bold rounded-full py-1 px-3 md:py-2 md:px-4 hover:bg-sky-700 hover:text-white transition text-sm md:text-base"
+              className="bg-green-300 text-sky-900 font-bold rounded-full py-1 px-3 md:py-2 md:px-4 hover:bg-sky-700 hover:text-white transition text-sm md:text-base hover:cursor-pointer"
               onClick={() => navigate("/login-admin")}
             >
               Admin
@@ -55,7 +55,7 @@ const Navbar = () => {
           </li>
           <li>
             <button
-              className="bg-green-300 text-sky-900 font-bold rounded-full py-1 px-3 md:py-2 md:px-4 hover:bg-sky-700 hover:text-white transition text-sm md:text-base"
+              className="bg-green-300 text-sky-900 font-bold rounded-full py-1 px-3 md:py-2 md:px-4 hover:bg-sky-700 hover:text-white transition text-sm md:text-base hover:cursor-pointer"
               onClick={() => navigate("/login-tutor")}
             >
               Tutor

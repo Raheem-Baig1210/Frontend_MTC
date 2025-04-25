@@ -37,7 +37,7 @@ export default function MarkAttendance() {
             </tr>
           </tbody>
         </table>
-        <button className="bg-black text-white px-4 py-2 rounded cursor-pointer">Submit Attendance</button>
+        <button className="bg-med-blue text-white px-4 py-2 rounded cursor-pointer">Submit Attendance</button>
       </div>
     </div>
   );

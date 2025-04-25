@@ -1,81 +1,74 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import { ToastContainer, toast } from "react-toastify"; // import toast
-import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-    // const [loading,setLoading] = useState(false)
-    const navigate = useNavigate()
-    const [formValues, setFormValues] = useState({
-        email:"",
-        password:"",
-    })
-    const handleInputChange = (e) => {
-        setFormValues({
-            ...formValues,
-            [e.target.name]: e.target.value,
-        })
+  const navigate = useNavigate();
+  const [formValues, setFormValues] = useState({ email: "", password: "" });
+
+  const handleInputChange = (e) => {
+    setFormValues({
+      ...formValues,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:5001/admin/login', formValues);
+      navigate("/admin-dashboard");
+    } catch (error) {
+      alert("Invalid Email or Password....!!!");
     }
+  };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        
-        try {
-          const response = await axios.post('http://localhost:5001/admin/login', formValues);
-          navigate("/admin-dashboard")
-          console.log(response.data);
-        } catch (error) {
-            alert("Invalid Email or Password....!!!")
-          console.error('Error sending data:', error);
-        }
-      };
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-nyanza px-4">
+      <div className="bg-white rounded-xl shadow-lg p-8 w-full max-w-md border border-car-blue">
+        <h1 className="text-3xl font-bold text-charcoal mb-6 text-center">Admin Login</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-5">
+            <label htmlFor="email" className="block text-base font-medium text-charcoal mb-2">
+              Email Address
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value={formValues.email}
+              onChange={handleInputChange}
+              required
+              placeholder="you@example.com"
+              className="w-full px-4 py-2 border border-charcoal rounded-md focus:outline-none focus:ring-2 focus:ring-med-blue"
+            />
+          </div>
+          <div className="mb-6">
+            <label htmlFor="password" className="block text-base font-medium text-charcoal mb-2">
+              Password
+            </label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              value={formValues.password}
+              onChange={handleInputChange}
+              required
+              placeholder="••••••••"
+              className="w-full px-4 py-2 border border-charcoal rounded-md focus:outline-none focus:ring-2 focus:ring-med-blue"
+            />
+          </div>
+          <button
+            type="submit"
+            className="w-full bg-med-blue hover:bg-med-blue text-white font-semibold py-2.5 rounded-md transition duration-300"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+};
 
-
-    return (
-        // <h1>Admin Login</h1>
-        <div className="border rounded-[3%] ml-118 mt-30 bg-gray-300 w-[40%] h-120 text-center">
-        <h1 className="text-3xl mt-10 ">Admin Login</h1>
-            <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
-                <div className="relative z-0 w-full mb-5 group pt-15">
-                    <label
-                    htmlFor="floating_email"
-                    className="block text-left mb-2 text-xl"
-                    >Email address</label>
-                    <input 
-                    type="email"
-                    value={formValues.email}
-                    onChange={(e)=>handleInputChange(e)}
-                    name="email"
-                    id="floating_email"
-                    className="block w-full text-left mb-4 p-2 border rounded"
-                    placeholder="Email-id"
-                    required
-                    />
-                </div>
-                <div className="">
-                    <label
-                    htmlFor="floating_password"
-                    className="block text-left mb-2 text-xl"
-                    >Password</label>
-                    <input
-                    type="password"
-                    value={formValues.password}
-                    onChange={handleInputChange}
-                    name="password"
-                    id="floating_password"
-                    className="block w-full text-left mb-4 p-2 border rounded"
-                    placeholder="Password"
-                    required
-                    />
-                </div>
-                <button
-                type="submit"
-                className="mt-10  w-112 text-white bg-blue-700 hover:bg-blue-1000  font-medium rounded-lg text-sm  px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 "
-                >Submit</button>
-            </form>
-        </div>
-    )
-}
-
-export default Login
+export default Login;

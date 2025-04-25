@@ -8,7 +8,7 @@ export default function AttendanceHistory() {
         <h2 className="text-xl font-semibold mb-4">Attendance History</h2>
         <div className="flex justify-between items-center mb-4">
           <input className="border px-2 py-1 rounded w-1/2" placeholder="Search by student name or roll number..." />
-          <button className="bg-black text-white px-4 py-1 rounded cursor-pointer">Search</button>
+          <button className="bg-med-blue text-white px-4 py-1 rounded cursor-pointer">Search</button>
         </div>
         <div className="bg-white p-4 rounded shadow-md mb-4 flex justify-between items-center">
           <div className="flex items-center gap-4">

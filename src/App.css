@@ -23,6 +23,24 @@
   background-color: #336699; /*sky-700*/
 }
 
+.bg-purple{
+  background-color: #a684ff; /*violet-400*/
+}
+
+.bg-light-purple{
+  background-color: #e6ccff; /*violet-200*/
+}
+
+.bg-light-gray{
+  background-color: #721378; /*fuchsia-900*/
+}
+.bg-teal{
+  background-color: #1F7A8C; /*cyan-700*/
+}
+
+.bg-lavender{
+  background-color: #E1E5F2; /*indigo-200*/
+}
 
 
 
