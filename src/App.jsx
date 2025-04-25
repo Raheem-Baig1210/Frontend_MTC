@@ -26,6 +26,10 @@ import TutorProfile from "./LandingPages/Admin/TutorProfile";
 import MarkAttendance from "./LandingPages/Tutor/MarkAttendance";
 import AllAttendance from "./LandingPages/Tutor/StudentAttendance";
 import AttendanceHistory from "./LandingPages/Tutor/AttendanceHistory";
+import AddStudent from "./LandingPages/Tutor/AddStudent"
+import DeleteStudent from "./LandingPages/Tutor/DeleteStudent";
+
+
 
 function App() {
   return (
@@ -39,6 +43,10 @@ function App() {
         <Route path="/all-attendance" element={<AllAttendance/>} />
         <Route path="/attendance-history" element={<AttendanceHistory />} />
         <Route path="/admin-dashboard" element={<AdminDashboard />}></Route>
+
+
+        <Route path="/add-student" element={<AddStudent/>}/>
+        <Route path="/delete-student" element={<DeleteStudent/>}/>
         <Route path="/tutor-dashboard" element={<TutorDashboard />}></Route>
         <Route path="/centers" element={<Centers />}></Route>
         <Route path="/tutors" element={<Tutor />} />
