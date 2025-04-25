@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
 
 const Tutors = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-col md:flex-row min-h-screen bg-gray-50">
       <Sidebar />
@@ -21,10 +24,16 @@ const Tutors = () => {
           />
 
           <div className="flex flex-wrap gap-3">
-            <button className="px-5 py-2 text-lg font-medium bg-green-600 text-white rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400 transition">
+            <button
+              onClick={() => navigate("/add-tutor")}
+              className="px-5 py-2 text-lg font-medium bg-green-600 text-white rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+            >
               + Add Tutor
             </button>
-            <button className="px-5 py-2 text-lg font-medium bg-red-600 text-white rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-400 transition">
+            <button
+              onClick={() => navigate("/delete-tutor")}
+              className="px-5 py-2 text-lg font-medium bg-red-600 text-white rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-400 transition"
+            >
               – Remove Tutor
             </button>
           </div>
@@ -40,7 +49,6 @@ const Tutors = () => {
             >
               <h3 className="text-xl font-medium text-gray-800 mb-2">{name}</h3>
               <p className="text-gray-600 text-sm">
-                {/* Replace with real details */}
                 Email: tutor{idx + 1}@gmail.com
               </p>
             </div>
