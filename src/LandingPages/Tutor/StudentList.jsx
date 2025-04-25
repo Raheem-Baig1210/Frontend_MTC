@@ -5,15 +5,28 @@ import TutorNavbar from "../Components/TutorNavbar";
 export default function StudentList() {
   const navigate = useNavigate();
 
+  const handleAddStudent = () => {
+    navigate("/add-student")
+  }
+
+  const handleDeleteStudent = () => {
+    navigate("/delete-student")
+  }
+
+
   return (
     <div>
       <TutorNavbar />
       <div className="p-4">
         <div className="flex gap-4 mb-4">
-          <button className="bg-med-blue text-white px-4 py-2 rounded cursor-pointer" onClick={() => navigate("/mark")}>
+          <button className="bg-black text-white px-4 py-2 rounded cursor-pointer" onClick={handleAddStudent}>
             Add Student
           </button>
-          <button className="bg-med-blue text-white px-4 py-2 rounded cursor-pointer" onClick={() => navigate("/mark-attendance")}>
+          <button className="bg-black text-white px-4 py-2 rounded cursor-pointer" onClick={handleDeleteStudent}>
+            Delete Student
+          </button>
+          <button className="bg-black text-white px-4 py-2 rounded cursor-pointer" onClick={() => navigate("/mark-attendance")}>
+
             Mark Attendance
           </button>
           <button className="bg-med-blue text-white px-4 py-2 rounded cursor-pointer" onClick={() => navigate("/all-attendance")}>
