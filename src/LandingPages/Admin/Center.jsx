@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
 
 const Centers = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-col md:flex-row min-h-screen bg-gray-50">
       <Sidebar />
@@ -38,10 +41,16 @@ const Centers = () => {
           />
 
           <div className="flex flex-wrap gap-3">
-            <button className="px-5 py-2 text-lg font-medium bg-green-600 text-white rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400 transition">
+            <button
+              onClick={() => navigate("/add-center")}
+              className="px-5 py-2 text-lg font-medium bg-green-600 text-white rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+            >
               + Add Center
             </button>
-            <button className="px-5 py-2 text-lg font-medium bg-red-600 text-white rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-400 transition">
+            <button
+              onClick={() => navigate("/delete-center")}
+              className="px-5 py-2 text-lg font-medium bg-red-600 text-white rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-400 transition"
+            >
               – Remove Center
             </button>
           </div>
@@ -49,7 +58,6 @@ const Centers = () => {
 
         {/* Centers List Placeholder */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Replace this with your dynamic center cards */}
           {[1, 2, 3, 4].map((i) => (
             <div
               key={i}

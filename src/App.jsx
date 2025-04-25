@@ -28,6 +28,11 @@ import AllAttendance from "./LandingPages/Tutor/StudentAttendance";
 import AttendanceHistory from "./LandingPages/Tutor/AttendanceHistory";
 import AddStudent from "./LandingPages/Tutor/AddStudent"
 import DeleteStudent from "./LandingPages/Tutor/DeleteStudent";
+import AddCenter from "./LandingPages/Admin/AddCenter";
+import DeleteCenter from "./LandingPages/Admin/DeleteCenter"; 
+import AddTutor from "./LandingPages/Admin/AddTutor";
+import DeleteTutor from "./LandingPages/Admin/DeleteTutor";
+
 
 
 
@@ -43,8 +48,10 @@ function App() {
         <Route path="/all-attendance" element={<AllAttendance/>} />
         <Route path="/attendance-history" element={<AttendanceHistory />} />
         <Route path="/admin-dashboard" element={<AdminDashboard />}></Route>
-
-
+        <Route path='/add-center' element={<AddCenter />} />
+        <Route path='/delete-center' element={<DeleteCenter />} />
+        <Route path='/add-tutor' element={<AddTutor/>} />
+        <Route path='/delete-tutor' element={<DeleteTutor/>} />
         <Route path="/add-student" element={<AddStudent/>}/>
         <Route path="/delete-student" element={<DeleteStudent/>}/>
         <Route path="/tutor-dashboard" element={<TutorDashboard />}></Route>
@@ -52,6 +59,7 @@ function App() {
         <Route path="/tutors" element={<Tutor />} />
         <Route path="/students" element={<Students />} />
         <Route path="/attendance" element={<Attendance />} />
+        <Route path="/tutor-profile" element={<TutorProfile />} />
       </Routes>
     </BrowserRouter>
   );
