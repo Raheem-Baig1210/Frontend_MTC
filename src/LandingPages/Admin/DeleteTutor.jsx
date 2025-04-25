@@ -1,35 +1,44 @@
 import React from 'react'
-import {Formik, Form,Field,ErrorMessage} from "formik"
+import { Formik, Form, Field, ErrorMessage } from "formik"
 import * as Yup from "yup"
 
 function DeleteTutor() {
   return (
-    <>
-    <div className='w-[100vw] h-[100vh] bg-[#302f2f]'>
-              <h1 className="block mb-5 text-4xl p-4 font-large text-gray-900 text-white text-center">Delete Tutor</h1>
-            <Formik
-              initialValues={{
-                email:""
-              }}
-              validationSchema={Yup.object({
-                TutorId:Yup.string().required("email is mandatory")
-              })}
-              onSubmit={(values) => {console.log(values)}}
-            >
-            <Form className="max-w-sm mx-auto">
-          <div className="mb-5 ">
-            <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">email</label>
-            <Field type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Tutor Email" required />
-            <div className='text-sm text-red-500'>
-              <ErrorMessage name="email"/>
+    <div className="min-h-screen bg-[#DAF7DC] flex flex-col items-center justify-center px-4 py-8">
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 fade-in">
+        <h1 className="text-3xl font-bold text-[#18425d] text-center mb-6">Delete Tutor</h1>
+        <Formik
+          initialValues={{ email: "" }}
+          validationSchema={Yup.object({
+            email: Yup.string().email("Invalid email").required("Email is mandatory")
+          })}
+          onSubmit={(values) => { console.log(values) }}
+        >
+          <Form className="space-y-5">
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-[#18425d] mb-1">Email</label>
+              <Field
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter Tutor Email"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-[#9EE493] focus:outline-none transition duration-300"
+              />
+              <div className="text-xs text-red-500 mt-1">
+                <ErrorMessage name="email" />
+              </div>
             </div>
-          </div>
-         
-          <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Delete Tutor</button>
-        </Form>
+
+            <button
+              type="submit"
+              className="w-full bg-[#18425d] text-white font-semibold py-2 px-4 rounded-lg hover:bg-[#133346] transition duration-300"
+            >
+              Delete Tutor
+            </button>
+          </Form>
         </Formik>
-        </div>
-            </>
+      </div>
+    </div>
   )
 }
 
