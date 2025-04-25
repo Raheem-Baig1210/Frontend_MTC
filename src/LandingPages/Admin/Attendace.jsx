@@ -1,29 +1,47 @@
 import Sidebar from "./Sidebar";
 
-const Attendance=()=>{
-    return (
-        <>
-        <div className="flex">
-           <Sidebar/>
-           <div className="w-4/5">
-                <h1 className="text-3xl font-normal mt-4 ml-2 mb-4">Attendance Overview</h1>
-                <hr />
-                {/* Search bar */}
-                        <input
-                            className="border rounded p-2 m-4 ml-0 text-[15px] w-[300px]"
-                            type="text"
-                            placeholder="Search Tutors"
-                        />
-                    <h1 className="text-2xl mt-4 ml-2 mb-2 font-normal">Tutors Attendance List</h1>
-                    <div className="flex flex-col gap-4">
-                        <div className="w-100 h-30">Tutor1</div>
-                        <div className="w-100 h-30">Tutor2</div>
-                        <div className="w-100 h-30">Tutor3</div>
-                    </div>
-            </div> 
-        </div>        
-        </>
-    )
-}
+const Attendance = () => {
+  return (
+    <div className="flex flex-col md:flex-row min-h-screen bg-gray-50">
+      <Sidebar />
 
-export default Attendance
+      <main className="flex-1 p-6 md:p-10">
+        {/* Page Title */}
+        <h1 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-6">
+          Attendance Overview
+        </h1>
+        <hr className="border-gray-300 mb-6" />
+
+        {/* Search Bar */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
+          <input
+            type="text"
+            placeholder="Search Tutors"
+            className="flex-1 max-w-md px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+          />
+        </div>
+
+        {/* Attendance List */}
+        <h2 className="text-2xl font-semibold text-gray-700 mb-4">
+          Tutors Attendance List
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {["Tutor 1", "Tutor 2", "Tutor 3", "Tutor 4"].map((name, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6 cursor-pointer transform hover:-translate-y-1"
+            >
+              <h3 className="text-xl font-medium text-gray-800 mb-2">{name}</h3>
+              <p className="text-gray-600 text-sm">
+                {/* Replace with real attendance details */}
+                Present: 16 / 20 sessions
+              </p>
+            </div>
+          ))}
+        </div>
+      </main>
+    </div>
+  );
+};
+
+export default Attendance;

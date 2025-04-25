@@ -1,49 +1,71 @@
 import Sidebar from "./Sidebar";
 
 const Students = () => {
-    return (
-        <>
-            <div className="flex">
-                <Sidebar />
-                <div className="w-4/5">
-                    <h1 className="text-3xl font-normal mt-4 ml-2 mb-4">Students Overview</h1>
-                    <hr />
-                    <div className="flex justify-between mt-2">
-                        <div>
-                            Total Students
-                            <br />
-                            x
-                        </div>
-                        <div>Active Students
-                            <br />
-                            y
-                        </div>
-                        <div className="mr-4">Total Centers
-                            <br />
-                            z
-                        </div>
-                        <div className="mr-4">Total Tutors
-                            <br />
-                            z1
-                        </div>
-                    </div>
-                    {/* Search bar */}
-                        <input
-                            className="border rounded p-2 m-4 ml-0 text-[15px] w-[300px]"
-                            type="text"
-                            placeholder="Search Students"
-                        />
+  return (
+    <div className="flex flex-col md:flex-row min-h-screen bg-gray-50">
+      <Sidebar />
 
-                    <h1 className="text-3xl mt-4 ml-1 mb-2 font-normal">Students List</h1>
-                    <div className="flex flex-col gap-4">
-                        <div className="w-100 h-30">Student1</div>
-                        <div className="w-100 h-30">Student2</div>
-                        <div className="w-100 h-30">Student3</div>
-                    </div>
-                </div>
+      <main className="flex-1 p-6 md:p-10">
+        {/* Page Title */}
+        <h1 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-6">
+          Students Overview
+        </h1>
+        <hr className="border-gray-300 mb-6" />
+
+        {/* Stats Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          {[
+            { label: "Total Students", value: "x" },
+            { label: "Active Students", value: "y" },
+            { label: "Total Centers", value: "z" },
+            { label: "Total Tutors", value: "z1" },
+          ].map((stat, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6 text-center cursor-pointer transform hover:-translate-y-1"
+            >
+              <div className="text-2xl font-bold text-blue-600 mb-2">
+                {stat.value}
+              </div>
+              <div className="text-gray-600">{stat.label}</div>
             </div>
-        </>
-    )
-}
+          ))}
+        </div>
 
-export default Students
+        {/* Search Bar */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
+          <input
+            type="text"
+            placeholder="Search Students"
+            className="flex-1 max-w-md px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+          />
+        </div>
+
+        {/* Students List */}
+        <h2 className="text-2xl font-semibold text-gray-700 mb-4">
+          Students List
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {["Student 1", "Student 2", "Student 3", "Student 4"].map(
+            (name, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6 cursor-pointer transform hover:-translate-y-1"
+              >
+                <h3 className="text-xl font-medium text-gray-800 mb-2">
+                  {name}
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  {/* Replace with real details */}
+                  Grade: A | Center: Example Center
+                </p>
+              </div>
+            )
+          )}
+        </div>
+      </main>
+    </div>
+  );
+};
+
+export default Students;
