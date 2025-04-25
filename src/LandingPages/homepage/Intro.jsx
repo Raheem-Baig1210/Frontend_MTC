@@ -1,12 +1,25 @@
-
 import React from "react";
 
 const Intro = () => {
+
+  const videoOptions = {
+    height: '256', // h-64
+    width: '100%',
+    playerVars: {
+      autoplay: 0,
+    },
+  };
+
   return (
 
 
-    <div className="flex flex-col lg:flex-row px-4 lg:px-10" style={{
-      backgroundImage: `url('https://thequranfoundation.org/wp-content/uploads/2020/06/map-bg.jpg')`}}>
+    <div className="flex flex-col lg:flex-row px-4 lg:px-10 relative" style={{ 
+      backgroundImage: `url('https://thequranfoundation.org/wp-content/uploads/2020/06/map-bg.jpg')`,
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover'
+    }}>
+      
 
       <br />
       {/* Left-Side Content */}
@@ -16,11 +29,11 @@ const Intro = () => {
           <img
             src="https://thequranfoundation.org/wp-content/uploads/elementor/thumbs/education-ql1fzaz4q9wmh2sqotsiekcfn26rf83incaw963rc0.png"
             alt="Equal Access to Education"
-            className="w-28 h-28 mb-4 transition-transform duration-300 group-hover:scale-110"
+            className="w-28 h-28 mb-4 transition-transform duration-300 group-hover:scale-110 text-cyan-700"
           />
           <a
             href="#"
-            className="text-xl font-bold text-black group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer text-center"
+            className="text-xl font-bold text-violet-400 group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer text-center"
           >
             Equal Access to Education
           </a>
@@ -31,11 +44,11 @@ const Intro = () => {
           <img
             src="https://thequranfoundation.org/wp-content/uploads/elementor/thumbs/idea-ql1g5q7ffip5t5gv6lqqfxztruj20rlhj4scb8kwtc.png"
             alt="Addressing Learning Gaps"
-            className="w-28 h-28 mb-4 transition-transform duration-300 group-hover:scale-110"
+            className="w-28 h-28 mb-4 text-sky-300 transition-transform duration-300 group-hover:scale-110"
           />
           <a
             href="#"
-            className="text-xl font-bold text-black group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer text-center"
+            className="text-xl font-bold text-sky-300 group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer text-center"
           >
             Addressing Learning Gaps
           </a>
@@ -50,7 +63,7 @@ const Intro = () => {
           />
           <a
             href="#"
-            className="text-xl font-bold text-black group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer text-center"
+            className="text-xl font-bold text-fuchsia-900 group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer text-center"
           >
             Empowerment Through Education
           </a>
@@ -83,43 +96,7 @@ const Intro = () => {
 
 
         <br /><br />
-        {/* Embedded YouTube Video */}
-        <h1 className="text-2xl font-bold text-center mb-6 text-sky-900">
-        - Witness the impact of our initiative
-         </h1>
-        <div className="w-full lg:w-3/4 px-4 mb-6">
         
-        <iframe
-            className="w-full h-64 rounded-lg shadow-lg"
-            src="https://youtu.be/bYxIJet8Esw?si=mSNwyTT4hrfZogyB" // Replace YOUR_VIDEO_ID with the actual ID
-            title="YouTube video"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-        ></iframe>
-        
-        <br />
-
-        <iframe
-            className="w-full h-64 rounded-lg shadow-lg"
-            src="https://youtu.be/TTO6-sG0Q7Q?si=52m333cnVP9Vz9di" // Replace YOUR_VIDEO_ID with the actual ID
-            title="YouTube video"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-        ></iframe>
-
-        <br />
-
-        <iframe
-            className="w-full h-64 rounded-lg shadow-lg"
-            src="https://youtu.be/QfsD7YgpVDU?si=7iqd9Giqun_evY49" // Replace YOUR_VIDEO_ID with the actual ID
-            title="YouTube video"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-        ></iframe>
-        </div>
       </div>
 
       {/* Right-Side Content */}
@@ -133,7 +110,7 @@ const Intro = () => {
           />
           <a
             href="#"
-            className="text-xl font-bold text-black group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer text-center"
+            className="text-xl font-bold text-violet-400 group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer text-center"
           >
             Building Confidence and Self-esteem
           </a>
@@ -148,7 +125,7 @@ const Intro = () => {
           />
           <a
             href="#"
-            className="text-xl font-bold text-black group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer text-center"
+            className="text-xl font-bold text-sky-300 group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer text-center"
           >
             Enhancing Literacy and Numeracy Skills
           </a>
@@ -163,12 +140,20 @@ const Intro = () => {
           />
           <a
             href="#"
-            className="text-xl font-bold text-black group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer text-center"
+            className="text-xl font-bold text-fuchsia-900 group-hover:text-green-300 group-hover:scale-110 transition-all duration-300 cursor-pointer text-center"
           >
             Preventing School Dropout
           </a>
         </div>
       </div>
+
+      {/* <div
+        className="absolute bottom-0 left-0 w-full h-full bg-no-repeat bg-bottom bg-contain pointer-events-none"
+          style={{
+             backgroundImage: `url('https://thequranfoundation.org/wp-content/uploads/2020/06/paral-23.jpg')`, // Replace with actual footer image URL
+      }}
+      ></div> */}
+
     </div>
   );
 };

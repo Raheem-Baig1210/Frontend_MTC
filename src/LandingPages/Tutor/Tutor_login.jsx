@@ -61,7 +61,7 @@ const TutorLogin = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-med-blue hover:bg-red-500 text-white font-semibold py-2.5 rounded-md transition duration-300"
+            className="w-full bg-med-blue hover:bg-med-blue text-white font-semibold py-2.5 rounded-md transition duration-300"
           >
             Submit
           </button>
