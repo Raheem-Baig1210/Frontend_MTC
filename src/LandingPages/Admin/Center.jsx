@@ -2,7 +2,10 @@ import { useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
 
 const Centers = () => {
-  const navigate = useNavigate();
+
+  const navigate = useNavigate()
+  const handleAddCenter = () => navigate("/add-center")
+  const handleDeleteCenter = () => navigate("/delete-center")
 
   return (
     <div className="flex flex-col md:flex-row min-h-screen bg-[#f8fdf8]">
@@ -40,17 +43,13 @@ const Centers = () => {
             placeholder="Search Centers..."
             className="flex-1 max-w-md px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#18425d] transition"
           />
-          <div className="flex gap-3 flex-wrap">
-            <button
-              onClick={() => navigate("/add-center")}
-              className="bg-[#4CAF50] hover:bg-green-700 text-white px-5 py-2 rounded-lg shadow hover:shadow-md transition transform hover:scale-105"
-            >
+
+
+          <div className="flex flex-wrap gap-3">
+            <button className="px-5 py-2 text-lg font-medium bg-green-600 text-white rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400 transition" onClick={handleAddCenter}>
               + Add Center
             </button>
-            <button
-              onClick={() => navigate("/delete-center")}
-              className="bg-[#f44336] hover:bg-red-700 text-white px-5 py-2 rounded-lg shadow hover:shadow-md transition transform hover:scale-105"
-            >
+            <button className="px-5 py-2 text-lg font-medium bg-red-600 text-white rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-400 transition" onClick={handleDeleteCenter}>
               – Remove Center
             </button>
           </div>

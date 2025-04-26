@@ -20,7 +20,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", controlNavbar);
     };
-  }, [lastScrollY]);
+  }, [window.scrollY]);
 
   return (
     <div
