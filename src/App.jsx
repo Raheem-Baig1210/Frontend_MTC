@@ -28,6 +28,8 @@ import AllAttendance from "./LandingPages/Tutor/StudentAttendance";
 import AttendanceHistory from "./LandingPages/Tutor/AttendanceHistory";
 import AddStudent from "./LandingPages/Tutor/AddStudent"
 import DeleteStudent from "./LandingPages/Tutor/DeleteStudent";
+import AddCenter from "./LandingPages/Admin/AddCenter"
+import DeleteCenter from "./LandingPages/Admin/DeleteCenter"
 
 
 
@@ -46,7 +48,9 @@ function App() {
 
 
         <Route path="/add-student" element={<AddStudent/>}/>
+        <Route path="/add-center" element={<AddCenter/>}/>
         <Route path="/delete-student" element={<DeleteStudent/>}/>
+        <Route path="/delete-center" element={<DeleteCenter/>}/>
         <Route path="/tutor-dashboard" element={<TutorDashboard />}></Route>
         <Route path="/centers" element={<Centers />}></Route>
         <Route path="/tutors" element={<Tutor />} />
