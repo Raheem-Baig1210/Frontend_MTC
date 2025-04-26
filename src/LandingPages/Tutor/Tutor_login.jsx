@@ -1,81 +1,107 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import { ToastContainer, toast } from "react-toastify"; // import toast
-import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import "react-toastify/dist/ReactToastify.css";
+import "./TutorLogin.css"; // 👈 Add animation styles
 
-const Login = () => {
-    // const [loading,setLoading] = useState(false)
-    const navigate = useNavigate()
-    const [formValues, setFormValues] = useState({
-        email:"",
-        password:"",
-    })
-    const handleInputChange = (e) => {
-        setFormValues({
-            ...formValues,
-            [e.target.name]: e.target.value,
-        })
+const TutorLogin = () => {
+  const navigate = useNavigate();
+  const [formValues, setFormValues] = useState({ email: "", password: "" });
+
+  const handleInputChange = (e) => {
+    setFormValues({
+      ...formValues,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post("http://localhost:5001/tutor/login", formValues);
+      navigate("/tutor-dashboard");
+    } catch (error) {
+      alert("Invalid Email or Password....!!!");
     }
+  };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        
-        try {
-          const response = await axios.post('http://localhost:5001/tutor/login', formValues);
-          navigate("/tutor-dashboard")
-          console.log(response.data);
-        } catch (error) {
-            alert("Invalid Email or Password....!!!")
-          console.error('Error sending data:', error);
-        }
-      };
+  return (
+    <div className="flex items-center justify-center min-h-screen px-4" style={{ backgroundColor: "#DAF7DC" }}>
+      <div
+        className="w-full max-w-md p-8 rounded-2xl shadow-xl border"
+        style={{
+          backgroundColor: "#ffffff",
+          borderColor: "#9EE493",
+          animation: "fadeInUp 0.6s ease-out",
+        }}
+      >
+        <h1 className="text-3xl font-bold mb-6 text-center" style={{ color: "#18425d" }}>
+          Tutor Login
+        </h1>
+        <form onSubmit={handleSubmit} className="space-y-5">
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium mb-1" style={{ color: "#18425d" }}>
+              Email Address
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value={formValues.email}
+              onChange={handleInputChange}
+              required
+              placeholder="you@example.com"
+              className="w-full px-4 py-2 rounded-md focus:outline-none border transition shadow-sm hover:shadow-md"
+              style={{
+                backgroundColor: "#DAF7DC",
+                borderColor: "#9EE493",
+                color: "#18425d",
+              }}
+            />
+          </div>
+          <div>
+            <label htmlFor="password" className="block text-sm font-medium mb-1" style={{ color: "#18425d" }}>
+              Password
+            </label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              value={formValues.password}
+              onChange={handleInputChange}
+              required
+              placeholder="••••••••"
+              className="w-full px-4 py-2 rounded-md focus:outline-none border transition shadow-sm hover:shadow-md"
+              style={{
+                backgroundColor: "#DAF7DC",
+                borderColor: "#9EE493",
+                color: "#18425d",
+              }}
+            />
+          </div>
+          <button
+            type="submit"
+            className="w-full font-semibold py-2.5 rounded-md transition duration-300"
+            style={{
+              backgroundColor: "#18425d",
+              color: "white",
+              boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.backgroundColor = "#9EE493";
+              e.target.style.color = "#18425d";
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.backgroundColor = "#18425d";
+              e.target.style.color = "white";
+            }}
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+};
 
-
-    return (
-        // <h1>Admin Login</h1>
-        <div className="border rounded-[3%] ml-118 mt-30 bg-gray-300 w-[40%] h-120 text-center">
-        <h1 className="text-3xl mt-10 ">Tutor Login</h1>
-            <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
-                <div className="relative z-0 w-full mb-5 group pt-15">
-                    <label
-                    htmlFor="floating_email"
-                    className="block text-left mb-2 text-xl"
-                    >Email address</label>
-                    <input 
-                    type="email"
-                    value={formValues.email}
-                    onChange={(e)=>handleInputChange(e)}
-                    name="email"
-                    id="floating_email"
-                    className="block w-full text-left mb-4 p-2 border rounded"
-                    placeholder="Email-id"
-                    required
-                    />
-                </div>
-                <div className="">
-                    <label
-                    htmlFor="floating_password"
-                    className="block text-left mb-2 text-xl"
-                    >Password</label>
-                    <input
-                    type="password"
-                    value={formValues.password}
-                    onChange={handleInputChange}
-                    name="password"
-                    id="floating_password"
-                    className="block w-full text-left mb-4 p-2 border rounded"
-                    placeholder="Password"
-                    required
-                    />
-                </div>
-                <button
-                type="submit"
-                className="mt-10  w-112 text-white bg-blue-700 hover:bg-blue-1000  font-medium rounded-lg text-sm  px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 "
-                >Submit</button>
-            </form>
-        </div>
-    )
-}
-
-export default Login
+export default TutorLogin;

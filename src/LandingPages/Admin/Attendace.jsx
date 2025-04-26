@@ -1,13 +1,20 @@
 import Sidebar from "./Sidebar";
+import "./Attendance.css"; // component-scoped styles
 
 const Attendance = () => {
+  const backgroundColor = "#DAF7DC";
+  const accentColor = "#9EE493";
+  const textColor = "#18425d";
+
   return (
-    <div className="flex flex-col md:flex-row min-h-screen bg-gray-50">
+    <div className="flex flex-col md:flex-row min-h-screen" style={{ backgroundColor }}>
       <Sidebar />
 
       <main className="flex-1 p-6 md:p-10">
-        {/* Page Title */}
-        <h1 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-6">
+        <h1
+          className="text-3xl md:text-4xl font-semibold mb-6"
+          style={{ color: textColor }}
+        >
           Attendance Overview
         </h1>
         <hr className="border-gray-300 mb-6" />
@@ -17,23 +24,34 @@ const Attendance = () => {
           <input
             type="text"
             placeholder="Search Tutors"
-            className="flex-1 max-w-md px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+            className="flex-1 max-w-md px-4 py-2 border border-gray-300 rounded-lg transition focus:outline-none focus:ring-2"
+            style={{
+              color: textColor,
+              borderColor: accentColor,
+              backgroundColor: "#fff",
+            }}
           />
         </div>
 
         {/* Attendance List */}
-        <h2 className="text-2xl font-semibold text-gray-700 mb-4">
+        <h2
+          className="text-2xl font-semibold mb-4"
+          style={{ color: textColor }}
+        >
           Tutors Attendance List
         </h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {["Tutor 1", "Tutor 2", "Tutor 3", "Tutor 4"].map((name, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6 cursor-pointer transform hover:-translate-y-1"
+              className="attendance-card"
+              style={{ borderLeft: `5px solid ${accentColor}` }}
             >
-              <h3 className="text-xl font-medium text-gray-800 mb-2">{name}</h3>
-              <p className="text-gray-600 text-sm">
-                {/* Replace with real attendance details */}
+              <h3 className="text-xl font-medium mb-2" style={{ color: textColor }}>
+                {name}
+              </h3>
+              <p className="text-sm" style={{ color: textColor }}>
                 Present: 16 / 20 sessions
               </p>
             </div>

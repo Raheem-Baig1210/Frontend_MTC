@@ -1,102 +1,79 @@
-import React from 'react'
-import {Formik, Form,Field,ErrorMessage} from "formik"
-import * as Yup from "yup"
+import React from 'react';
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
 
 function AddTutor() {
   return (
-    <>
-        <div className='w-[100%] h-[100%] bg-[#302f2f]'>
-          <h1 className="block mb-5 text-4xl p-4 font-large text-gray-900 text-white text-center">Add A New Tutor</h1>
+    <div className="min-h-screen bg-[#DAF7DC] px-4 py-8 flex items-center justify-center">
+      <div className="w-full max-w-lg bg-white rounded-2xl shadow-2xl p-8 fade-in">
+        <h1 className="text-3xl font-bold text-center text-[#18425d] mb-6">Add A New Tutor</h1>
         <Formik
           initialValues={{
-            name:"",
-            email:"",
-            password:"",
-            specialization:"",
-            number:"",
-            experience:"",
-            center:"",
-            resume:""
+            name: "", email: "", password: "",
+            specialization: "", number: "",
+            experience: "", center: "", resume: ""
           }}
           validationSchema={Yup.object({
-            name:Yup.string().required("Name is mandatory"),
-            email:Yup.string().email("Invalid email").required("Email is mandatory"),
-            password:Yup.string().required("Password is mandatory"),
-            specialization:Yup.string().required("Specialization is mandatory"),
-            number:Yup.string().matches(/^(\+?\d{1,3}[- ]?)?\d{10}$/, "Enter a valid phone number").required("Contact number is mandatory"),
-            experience:Yup.string().required("Experience is mandatory"),
-            center:Yup.string().required("Center is mandatory"),
-            resume:Yup.string().required("Upload Your Resume")
+            name: Yup.string().required("Name is mandatory"),
+            email: Yup.string().email("Invalid email").required("Email is mandatory"),
+            password: Yup.string().required("Password is mandatory"),
+            specialization: Yup.string().required("Specialization is mandatory"),
+            number: Yup.string().matches(/^(\+?\d{1,3}[- ]?)?\d{10}$/, "Enter a valid phone number").required("Contact number is mandatory"),
+            experience: Yup.string().required("Experience is mandatory"),
+            center: Yup.string().required("Center is mandatory"),
+            resume: Yup.string().required("Upload Your Resume")
           })}
-          onSubmit={(values) => {console.log(values)}}
+          onSubmit={(values) => console.log(values)}
         >
-        <Form className="max-w-sm mx-auto">
-      <div className="mb-5 ">
-        <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full Name</label>
-        <Field type="text" name="name" id="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Full Name" required />
-        <div className='text-sm text-red-500'>
-          <ErrorMessage name="name"/>
-        </div>
-      </div>
-      <div className="mb-5 ">
-        <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-        <Field type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter email" required />
-        <div className='text-sm text-red-500'>
-          <ErrorMessage name='email'/>
-        </div>
-      </div>
-      <div className="mb-5 ">
-        <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-        <Field type="password" name="password" id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Password" required />
-        <div className='text-sm text-red-500'>
-          <ErrorMessage name='password'/>
-        </div>
-      </div>
-      <div className="mb-5 ">
-        <label htmlFor="specialization" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Specialization</label>
-        <Field type="text" name="specialization" id="specialization" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter specialization" required />
-        <div className='text-sm text-red-500'>
-          <ErrorMessage name='specialization'/>
-        </div>
-      </div>
-      <div className="mb-5 ">
-        <label htmlFor="number" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Contact Number</label>
-        <Field type="tel" name="number" id="number" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Number" required />
-        <div className='text-sm text-red-500'>
-          <ErrorMessage name='number'/>
-        </div>
-      </div>
-      <div className="mb-5 ">
-        <label htmlFor="experience" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Experience</label>
-        <Field type="number" name="experience" id="experience" accept=".jpg" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Experience in Years" required />
-        <div className='text-sm text-red-500'>
-          <ErrorMessage name='experience'/>
-        </div>
-      </div>
-      <div className="mb-5 ">
-        <label htmlFor="center" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Center Assigned</label>
-        <Field type="text" name="center" id="center" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Center ID" required />
-        <div className='text-sm text-red-500'>
-          <ErrorMessage name='center'/>
-        </div>
-      </div>
-      <div className="mb-5 ">
-        <label htmlFor="resume" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Resume</label>
-        <Field type="file" name="resume" id="resume" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Upload Resume" required />
-        <div className='text-sm text-red-500'>
-          <ErrorMessage name='resume'/>
-        </div>
-      </div>
+          <Form className="space-y-5">
+            {[
+              { label: "Full Name", name: "name", type: "text", placeholder: "Enter Full Name" },
+              { label: "Email", name: "email", type: "email", placeholder: "Enter Email" },
+              { label: "Password", name: "password", type: "password", placeholder: "Enter Password" },
+              { label: "Specialization", name: "specialization", type: "text", placeholder: "e.g., Math, Physics" },
+              { label: "Contact Number", name: "number", type: "tel", placeholder: "Enter Contact Number" },
+              { label: "Experience (Years)", name: "experience", type: "number", placeholder: "e.g., 3" },
+              { label: "Center Assigned", name: "center", type: "text", placeholder: "Enter Center ID" },
+            ].map(({ label, name, type, placeholder }) => (
+              <div key={name}>
+                <label htmlFor={name} className="block text-sm font-medium text-[#18425d] mb-1">{label}</label>
+                <Field
+                  type={type}
+                  name={name}
+                  id={name}
+                  placeholder={placeholder}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#9EE493] focus:outline-none text-sm transition duration-300 ease-in-out"
+                />
+                <div className="text-xs text-red-500 mt-1">
+                  <ErrorMessage name={name} />
+                </div>
+              </div>
+            ))}
 
-      
-      
-      
-      <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add Tutor</button>
-    </Form>
-    </Formik>
+            <div>
+              <label htmlFor="resume" className="block text-sm font-medium text-[#18425d] mb-1">Upload Resume</label>
+              <Field
+                type="file"
+                name="resume"
+                id="resume"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg bg-gray-50 text-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:bg-[#9EE493] file:text-[#18425d] hover:file:bg-[#82d27c] transition"
+              />
+              <div className="text-xs text-red-500 mt-1">
+                <ErrorMessage name="resume" />
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-[#18425d] text-white font-semibold py-2 px-4 rounded-lg hover:bg-[#133346] transition duration-300"
+            >
+              Add Tutor
+            </button>
+          </Form>
+        </Formik>
+      </div>
     </div>
-        </>
-  )
+  );
 }
 
-export default AddTutor
+export default AddTutor;

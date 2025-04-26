@@ -10,7 +10,7 @@ const CardsContainer = () => {
   ];
 
   return (
-    <div className="flex flex-wrap gap-6 justify-center mt-10">
+    <div className="flex flex-wrap gap-6 justify-center items-center mt-5 bg-light-green h-60">
       {cards.map((card, index) => (
         <Card key={index} {...card} />
       ))}
