@@ -1,5 +1,24 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios"
+
+async function gotLocation(position){
+  console.log(position);
+  console.log(position.coords.latitude,position.coords.longitude)
+  axios.post('http://localhost:3000/teachernoauth/location',{
+    "latitude":`${position.coords.latitude}`,
+    "longitude":`${position.coords.longitude}`,
+    "center":"C124"
+  }).then(res=>console.log(res)).catch(err=>console.log(err))
+}
+function failed(){
+  console.log("Location fetch has failed");
+}
+
+const attendancelogic=()=>{
+  const result=navigator.geolocation.getCurrentPosition(gotLocation,failed);
+  console.log(result)
+}
 
 const TutorDashboard = () => {
   const navigate = useNavigate();
@@ -62,7 +81,7 @@ const TutorDashboard = () => {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-2">
-            <button className="flex-1 bg-[#9EE493] text-[#18425d] py-2 rounded-lg hover:bg-[#86d680] transition">
+            <button onClick={attendancelogic} className="flex-1 bg-[#9EE493] text-[#18425d] py-2 rounded-lg hover:bg-[#86d680] transition">
               Mark Attendance
             </button>
             <button className="flex-1 border border-gray-400 text-[#18425d] py-2 rounded-lg hover:bg-gray-100 transition">
